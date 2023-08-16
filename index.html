@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body{
+            background-color: #DCF8F8;
+            color: #141F1F;
+            transition: 0.6s ease-in-out;
+          }
+            .button-primary {
+            background-color: #00A2A2; 
+            border: none;
+            color: #F2F9F8;
+            padding: 20px;
+            border-radius: 0.8rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+            .button-primary:hover {
+            border: 3px #758484;
+            color: #000201;
+            padding: 20px;
+            border-radius: 0.8rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+        #spam{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div style="max-width: 600px; margin: 1rem 2rem 1rem 2rem;">
+            <h2>Contact Us!</h2>
+        </div>
+    </center>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
+                <form action="form.php" method="POST" id="formsContacto">
+                    <div class="form-group">
+                        <label for="nombre">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="cel">Phone</label>
+                        <input type="tel" class="form-control" name="phone" id="phone">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="ciudad">City</label>
+                        <input type="text" class="form-control" name="city" id="city">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="mensaje">Message</label>
+                        <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicios">Our Services:</label>
+                        <select class="form-control" id="servicios" name="servicios">
+                            <option>Graphic Design</option>
+                            <option>Community Management</option>
+                            <option>Professional Videos</option>
+                            <option>Web Development</option>
+                            <option>Marketing Campaings</option>
+                            <option>Advisory</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="finding">¿How do you find us?</label>
+                        <select class="form-control" id="finding" name="finding">
+                            <option>I found you guys on Google</option>
+                            <option>I've seen on Facebook</option>
+                            <option>A friend tells me</option>
+                            <option>Follow it from another link</option>
+                        </select>
+                    </div>
+                    <div id="spam">
+                        <label>Dejar esto en blanco</label>
+                        <input type="text" id="LET_IT_BLANK" name="LET_IT_BLANK" />
+                        <label>No cambiar esto</label>
+                        <input type="text" value="http://" name="DONT_CHANGE" />
+                    </div>
+    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                        <label class="form-check-label" for="terms">
+                            Agree with the <a class="link" href="#">terms</a>  and conditions
+                        </label>
+                    </div>
+    
+                    <button type="submit" class="button-primary ">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
