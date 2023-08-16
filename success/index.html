@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registry Forms</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+        <script src="https://kit.fontawesome.com/908f1ac032.js" crossorigin="anonymous"></script>
+        <style>
+          :root{
+            --green500: #00ff9d;
+            --black: #000201;
+            --white: #F2F9F8;
+          }
+        body{
+          background-color: #DCF8F8;
+          color: #141F1F;
+          transition: 0.6s ease-in-out;
+        }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div style="padding: 2.5rem; background-color: var(--black); border: 3px solid var(--white);">
+                <h1>Thanks for contact us 👋😄</h1>
+            <hr style="color: var(--green500)">
+            <p style="color: var(--white)"> We are on touch.</p>
+            <p> <span style="color: var(--white)">Back to </span> <a href="https://yourdomain.com/"> <i class="fa fa-home" aria-hidden="true"></i> Home</a></p>
+            <p style="color: var(--green500); font-weight: bold;">Redirecting automatically: </p>
+            <p style="color: var(--green500); font-weight: bold;" id="countdown">5</p>
+            </div>
+        </center>
+        <script>
+            setTimeout(function(){
+                window.location.href = "https://yourdomain.com/";
+            }, 5000);
+            var timeleft = 5;
+            var downloadTimer = setInterval(function(){
+            timeleft--;
+            document.getElementById("countdown").textContent = timeleft;
+            if(timeleft <= 0)
+                clearInterval(downloadTimer);
+            },1000);
+
+        </script>
+    </body>
+</html>
